@@ -2,15 +2,11 @@ import React from 'react';
 
 interface MapEmbedProps {
   address?: string;
-  width?: string;
-  height?: string;
   zoom?: number;
 }
 
 const GoogleMapEmbed: React.FC<MapEmbedProps> = ({
   address = 'Rua das Flores, 123, Jardim das Acácias, São Paulo, SP',
-  width = '100%',
-  height = '560px',
   zoom = 14,
 }) => {
   const query = encodeURIComponent(address);
@@ -20,9 +16,7 @@ const GoogleMapEmbed: React.FC<MapEmbedProps> = ({
     <iframe
       title="Localização no Google Maps"
       src={src}
-      width={width}
-      height={height}
-      style={{ border: 0 }}
+      style={{ border: 0, width: '100%', height: '100%' }}
       loading="lazy"
       allowFullScreen
     />

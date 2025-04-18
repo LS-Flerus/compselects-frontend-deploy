@@ -28,7 +28,7 @@ export const PerfilCard = ({
         <Box justifyItems={"center"}>
             <Card.Root maxW="sm" overflow="hidden" m={2} w={"19vw"} h={"56vh"} rounded={"xs"} className="cardShadow holographic-card">
                 <Card.Body gap="2" placeItems={"center"}>
-                    <Image src={foto} rounded={"full"} w={"60%"} fit={"cover"}/>
+                    <Image src={foto} rounded={"full"} w={"60%"} fit={"cover"} aspectRatio={'square'}/>
                     <Card.Title fontSize={"xl"}>{nome}</Card.Title>
                     {funcao ? <Badge colorPalette={"cyan"}>{funcao}</Badge> : <></>}
                     <Card.Description textAlign={"justify"} lineClamp={5}>{descricao}</Card.Description>
